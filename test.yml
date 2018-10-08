@@ -3,6 +3,6 @@
   hosts: db
   user: root
   sudo: false
-  gather_facts: true
+#  gather_facts: true
   tasks:
    - shell: echo "hello world"
