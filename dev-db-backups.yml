@@ -2,7 +2,7 @@
 - name: Dev Database Backup
   hosts: db
   user: ubuntu
-  sudo: false
+  sudo: true
   gather_facts: true
   tasks:
    - shell: /opt/scalr-server/embedded/bin/mysqldump --all-databases -uroot -p{{sql_password}} | gzip > /tmp/backup.gz
