@@ -6,5 +6,5 @@
   gather_facts: true
   tasks:
    - shell: /opt/scalr-server/embedded/bin/mysqldump --all-databases -uroot -p{{sql_password}} | gzip > "/tmp/backup.{{ lookup('pipe', 'date +%Y%m%d%H%M%S') }}.gz"
-   - command: scp -i /tmp/pem /tmp/backup.gz ubuntu@18.204.9.228:/tmp/backup
+   - command: scp -i /tmp/pem /tmp/backup* ubuntu@18.204.9.228:/tmp/backup
    - command: rm -rf /tmp/backup.gz
