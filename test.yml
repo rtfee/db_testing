@@ -1,8 +1,8 @@
 ---
 - name: Dev Database Backup
   hosts: db
-  user: ubuntu
-  sudo: true
+  user: root
+  sudo: false
   gather_facts: true
   tasks:
    - shell: echo "hello world"
