@@ -1,7 +1,7 @@
 ---
 - name: Dev Database Backup
   hosts: db
-  user: root
+  user: ubuntu
   sudo: false
   gather_facts: true
   tasks:
